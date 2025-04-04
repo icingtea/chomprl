@@ -8,8 +8,8 @@ from typing import Tuple
 console = Console()
 
 def loading() -> None:
-    with console.status("[#A0E8E3]bot move", spinner="dots12"):
-        time.sleep(2)
+    with console.status("[#A0E8E3]bot move", spinner="shark"):
+        time.sleep(3)
 
 def human_action(env: ChompEnv) -> Tuple[int, str]:
     valid_actions: list[int] = env.get_valid_actions()

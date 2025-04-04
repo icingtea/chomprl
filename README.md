@@ -20,6 +20,6 @@ this bot **will** make terrible decisions. it genuinely cannot play well. if you
    ```  
 3. run the game:  
    ```sh
-   python main.py  
+   python -m main.py  
    ```  
 4. pick a square. bot picks a square. try not to eat the poisoned piece. if you do, you lose. if the bot does, you win. you will probably win.
