@@ -5,6 +5,8 @@ import gymnasium as gym
 from gymnasium import spaces
 from typing import List, Tuple, Dict, Any, Optional
 
+# the grid dimension can be changed, but i'm not really sure how it'll affect performance. the dqn is an mlp, so the grid just gets flattened as input.
+
 # environment
 class ChompEnv(gym.Env):
     def __init__(self, GRID_SIZE: Tuple[int, int] = (5, 10), opponent_mode: bool = True) -> None:
@@ -103,7 +105,7 @@ class ChompEnv(gym.Env):
 
         agent_poison: bool = self.update_grid(action) # the agent makes its move
         if agent_poison: # agent loss case
-            reward += -150.0
+            reward += -550.0
             self.done = True
             return self.grid.numpy(), reward, self.done, truncated, info
 
