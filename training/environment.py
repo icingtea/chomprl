@@ -122,7 +122,7 @@ class ChompEnv(gym.Env):
                 opponent_action: int = self.poison
 
             opponent_poison: bool = self.update_grid(opponent_action)
-            reward += (150.0 if opponent_poison else 0.0) #reward for the agent if opponent loses
+            reward += (150.0 if opponent_poison else 0.0) # reward for the agent if opponent loses
             self.done = self.done or opponent_poison
 
         return self.grid.numpy(), reward, self.done, truncated, info
